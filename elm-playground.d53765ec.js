@@ -6068,7 +6068,7 @@ var $author$project$Pages$MultiHttpRequest$requestGet = function (url) {
 };
 var $author$project$Pages$MultiHttpRequest$requestParallel = function () {
 	var request4 = $author$project$Pages$MultiHttpRequest$requestGet('https://binaryjazz.us/wp-json/genrenator/v1/genre/');
-	var request3 = $author$project$Pages$MultiHttpRequest$requestGet('http://openlibrary.org/people/george08/lists.json');
+	var request3 = $author$project$Pages$MultiHttpRequest$requestGet('https://openlibrary.org/people/george08/lists.json');
 	var request2 = $author$project$Pages$MultiHttpRequest$requestGet('https://data.ripple.com/v2/ledgers/');
 	var request1 = $author$project$Pages$MultiHttpRequest$requestGet('https://dog.ceo/api/breeds/image/random');
 	return $elm$core$Platform$Cmd$batch(
@@ -6085,7 +6085,7 @@ var $author$project$Pages$MultiHttpRequest$requestSequential = function () {
 	var request4 = $author$project$Pages$MultiHttpRequest$requestGet('https://binaryjazz.us/wp-json/genrenator/v1/genre/');
 	var request3 = function (c) {
 		var _v1 = A2($elm$core$Debug$log, 'Response2: ', c);
-		return $author$project$Pages$MultiHttpRequest$requestGet('http://openlibrary.org/people/george08/lists.json');
+		return $author$project$Pages$MultiHttpRequest$requestGet('https://openlibrary.org/people/george08/lists.json');
 	};
 	var request2 = function (b) {
 		var _v0 = A2($elm$core$Debug$log, 'Response1: ', b);
@@ -6350,4 +6350,4 @@ var app = Elm.Main.init({
   node: document.getElementById('main')
 });
 },{"./src/Main.elm":"oS9F"}]},{},["Focm"], null)
-//# sourceMappingURL=/elm-playground.0f523178.js.map
+//# sourceMappingURL=/elm-playground.d53765ec.js.map
