@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "start": "parcel index.html --out-dir dist"
+    "start": "parcel index.html --out-dir dist",
+    "build": "parcel build index.html --out-dir dist --no-minify"
   },
   "dependencies": {
     "elm-format": "^0.8.3",
