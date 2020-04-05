@@ -94,6 +94,9 @@ requestSequential =
             let
                 _ =
                     Debug.log "Response1: " b
+
+                -- 前のAPIのレスポンスを使って、次のAPIを呼び出すようなAPIが簡単に見つからなかったので、
+                -- 以前の結果を使っているよという証明で、Debug.logを使ってconsole.logに書き出しています。
             in
             requestGet "https://data.ripple.com/v2/ledgers/"
 
