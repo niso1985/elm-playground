@@ -39,9 +39,11 @@ update : Msg -> Model -> ( Model, Cmd Msg )
 update msg model =
     case msg of
         RequestSequential ->
+            -- Task.attemptでTask.sequenceしたTaskを呼び出す
             ( { results = [] }, Task.attempt GotSequential requestSequential )
 
         GotSequential result ->
+            -- GotSequentialは「最終的に成功したか失敗したか」の１回しか呼び出されない
             case result of
                 Ok response ->
                     ( { model | results = response }, Cmd.none )
@@ -54,6 +56,8 @@ update msg model =
             ( { results = [] }, requestParallel )
 
         GotParallel result ->
+            -- GotParallelはリクエストが発生した回数分呼ばれる。なので、今回は４回呼ばれる。
+            -- 複数の結果を受け取ることになるので、結果が得られるたびにmodelへ追加している
             case result of
                 Ok response ->
                     ( { model | results = response :: model.results }, Cmd.none )
