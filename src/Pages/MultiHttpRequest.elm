@@ -109,7 +109,7 @@ requestSequential =
                 _ =
                     Debug.log "Response2: " c
             in
-            requestGet "http://openlibrary.org/people/george08/lists.json"
+            requestGet "https://openlibrary.org/people/george08/lists.json"
 
         request4 =
             requestGet "https://binaryjazz.us/wp-json/genrenator/v1/genre/"
@@ -136,7 +136,7 @@ requestParallel =
             requestGet "https://data.ripple.com/v2/ledgers/"
 
         request3 =
-            requestGet "http://openlibrary.org/people/george08/lists.json"
+            requestGet "https://openlibrary.org/people/george08/lists.json"
 
         request4 =
             requestGet "https://binaryjazz.us/wp-json/genrenator/v1/genre/"
